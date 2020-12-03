@@ -6,7 +6,7 @@
 //
 
 #import "SceneDelegate.h"
-#import "ViewController.h"
+#import "GTNewsViewController.h"
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
 
@@ -17,32 +17,25 @@
 @implementation SceneDelegate
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-    // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-    // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-    UITabBarController *tabbarController = [[UITabBarController alloc] init];
-    ViewController *viewController = [[ViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor whiteColor];
 
-    //UIViewController *controller1 = [[UIViewController alloc] init];
-    //controller1.view.backgroundColor = [UIColor redColor];
-    viewController.tabBarItem.title = @"新闻";
-    viewController.tabBarItem.image = [UIImage imageNamed:@"1"];
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    GTNewsViewController *newsViewController = [[GTNewsViewController alloc] init];
+    newsViewController.view.backgroundColor = [UIColor whiteColor];
+    newsViewController.tabBarItem.title = @"新闻";
+    newsViewController.tabBarItem.image = [UIImage imageNamed:@"1"];
 
     GTVideoViewController *videoController = [[GTVideoViewController alloc] init];
-    
 
     GTRecommendViewController *recommendController = [[GTRecommendViewController alloc] init];
-    
-    UIViewController *controller4 = [[UIViewController alloc] init];
-    controller4.view.backgroundColor = [UIColor lightGrayColor];
-    controller4.tabBarItem.title = @"我的";
-    controller4.tabBarItem.image = [UIImage imageNamed:@"1"];
 
-    [tabbarController setViewControllers:@[viewController, videoController, recommendController, controller4]];
+    UIViewController *mineViewController = [[UIViewController alloc] init];
+    mineViewController.view.backgroundColor = [UIColor lightGrayColor];
+    mineViewController.tabBarItem.title = @"我的";
+    mineViewController.tabBarItem.image = [UIImage imageNamed:@"1"];
+
+    [tabbarController setViewControllers:@[newsViewController, videoController, recommendController, mineViewController]];
     tabbarController.delegate = self;
-    
-    
+
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tabbarController];
     UIWindow *windowScene = (UIWindow *)scene;
     _window = [[UIWindow alloc] initWithFrame:windowScene.coordinateSpace.bounds];
@@ -51,10 +44,8 @@
     [_window makeKeyAndVisible];
 }
 
-
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
-    NSLog(@"did select");
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    
 }
 
 - (void)sceneDidDisconnect:(UIScene *)scene {

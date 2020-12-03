@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "GTNewsViewController.h"
 #import "SceneDelegate.h"
 @interface AppDelegate ()
 

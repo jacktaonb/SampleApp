@@ -7,15 +7,15 @@
 
 #import "GTRecommendViewController.h"
 
-@interface GTRecommendViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate>
+@interface GTRecommendViewController ()<UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @end
 
 @implementation GTRecommendViewController
 
--(instancetype) init{
+- (instancetype)init {
     self = [super init];
-    if(self){
+    if (self) {
         self.tabBarItem.title = @"推荐";
         self.tabBarItem.image = [UIImage imageNamed:@"1"];
     }
@@ -25,15 +25,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
 
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     scrollView.backgroundColor = [UIColor grayColor];
     scrollView.contentSize = CGSizeMake(self.view.bounds.size.width * 5, self.view.bounds.size.height);
     scrollView.delegate = self;
-    NSArray *colorArray = @[[UIColor redColor],[UIColor grayColor],[UIColor greenColor],[UIColor whiteColor],[UIColor blackColor]];
-    
-    for (int i= 0; i < 5; i++) {
+    NSArray *colorArray = @[[UIColor redColor], [UIColor grayColor], [UIColor greenColor], [UIColor whiteColor], [UIColor blackColor]];
+
+    for (int i = 0; i < 5; i++) {
         [scrollView addSubview:({
             UIView *view = [[UIView alloc] initWithFrame:CGRectMake(scrollView.bounds.size.width * i, 0, scrollView.bounds.size.width, scrollView.bounds.size.height)];
             [view addSubview:({
@@ -52,19 +51,18 @@
     [self.view addSubview:scrollView];
 }
 
--(void)viewClick{
+- (void)viewClick {
     NSLog(@"viewClick");
 }
 
-- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
     return NO;
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     NSLog(@"begin");
 }
 
@@ -72,16 +70,13 @@
     NSLog(@"end");
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
 }
 
-- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
-
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView {
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
 }
 
 @end
