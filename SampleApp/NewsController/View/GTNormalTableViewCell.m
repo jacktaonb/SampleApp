@@ -7,6 +7,7 @@
 
 #import "GTNormalTableViewCell.h"
 #import "GTListItem.h"
+#import "SDWebImage.h"
 
 @interface GTNormalTableViewCell ()
 
@@ -101,9 +102,26 @@
     [self.timeLabel sizeToFit];
     self.timeLabel.frame = CGRectMake(self.commentLabel.frame.origin.x + self.commentLabel.frame.size.width + 15, self.timeLabel.frame.origin.y, self.timeLabel.frame.size.width, self.timeLabel.frame.size.height);
     
-    UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//    NSThread *downloadImageThread = [[NSThread alloc] initWithBlock:^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//
+//    }];
+//    downloadImageThread.name = @"downloadImageThread";
+//    [downloadImageThread start];
     
-    self.rightimageView.image = image;
+//    dispatch_queue_global_t downloadQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_queue_t mainQueue = dispatch_get_main_queue();
+//
+//    dispatch_async(downloadQueue, ^{
+//        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.picUrl]]];
+//        dispatch_async(mainQueue, ^{
+//            self.rightimageView.image = image;
+//        });
+//    });
+    
+    [self.rightimageView sd_setImageWithURL:[NSURL URLWithString:item.picUrl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            NSLog(@"");
+    }];
 }
 
 - (void)deleteButtonClick {
