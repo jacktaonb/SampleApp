@@ -58,6 +58,7 @@
     view.view.backgroundColor = [UIColor whiteColor];
     view.title = [NSString stringWithFormat:@"%@", @(indexPath.row)];
     [self.navigationController pushViewController:view animated:YES];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
