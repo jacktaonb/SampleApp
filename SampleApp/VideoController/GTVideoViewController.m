@@ -7,6 +7,7 @@
 
 #import "GTVideoViewController.h"
 #import "GTViedoCoverView.h"
+#import "GTVideoToolbar.h"
 
 @interface GTVideoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -30,7 +31,7 @@
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.minimumLineSpacing = 10;
     flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.width / 16 * 9);
+    flowLayout.itemSize = CGSizeMake(self.view.bounds.size.width, self.view.bounds.size.width / 16 * 9 + GTVideoToolbarHeight);
     UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     collectionView.delegate = self;
     collectionView.dataSource = self;
@@ -45,8 +46,11 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GTViedoCoverView" forIndexPath:indexPath];
     if([cell isKindOfClass:[GTViedoCoverView class]]){
+        //http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4
         
+        [((GTViedoCoverView *)cell) layoutWithViedoCoverUrl:@"/Users/wangtao/Desktop/SampleApp/SampleApp/Assets.xcassets/123.png" videoUrl:@"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"];
     }
+    
     return cell;
 }
 
