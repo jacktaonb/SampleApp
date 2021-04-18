@@ -10,7 +10,7 @@
 #import "GTDeleteCellView.h"
 #import "GTListLoader.h"
 #import "GTListItem.h"
-#import "GTDetailViewController.h"
+#import "GTMediator.h"
 
 @interface GTNewsViewController ()<UITableViewDataSource, UITableViewDelegate, GTNormalTableViewCellDelgate>
 @property (nonatomic, strong, readwrite) UITableView *tableView;
@@ -54,12 +54,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GTListItem *item =  [self.dataArray objectAtIndex:indexPath.row];
-    GTDetailViewController *view = [[GTDetailViewController alloc] initWithUrlSting:item.articleUrl];
-    view.view.backgroundColor = [UIColor whiteColor];
-    view.title = [NSString stringWithFormat:@"%@", @(indexPath.row)];
-    [self.navigationController pushViewController:view animated:YES];
+//    __kindof UIViewController *view = [GTMediator detailViewControllerWithUrl:item.articleUrl];
+//    view.title = [NSString stringWithFormat:@"%@", @(indexPath.row)];
+//    [self.navigationController pushViewController:view animated:YES];
+    
+    //[GTMediator openUrl:@"detail://" params:@{@"url":item.articleUrl,@"controller":self.navigationController}];
+
+    Class cls = [GTMediator classForProtol:@protocol(GTDetailViewControllerProtocol)];
+    [self.navigationController pushViewController:[[cls alloc] detailViewControllerWithUrl:item.articleUrl] animated:YES];
+    
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:item.uniqueKey];
 }
+
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _dataArray.count;

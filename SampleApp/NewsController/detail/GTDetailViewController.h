@@ -6,10 +6,11 @@
 //
 //文章底层页
 #import <UIKit/UIKit.h>
+#import "GTMediator.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface GTDetailViewController : UIViewController
+@interface GTDetailViewController : UIViewController<GTDetailViewControllerProtocol>
 -(instancetype)initWithUrlSting:(NSString *)urlString;
 
 @end

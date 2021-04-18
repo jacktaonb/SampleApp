@@ -7,6 +7,7 @@
 
 #import "GTDetailViewController.h"
 #import <WebKit/WebKit.h>
+#import "GTMediator.h"
 
 @interface GTDetailViewController ()<WKNavigationDelegate>
 @property (nonatomic, strong, readwrite) WKWebView *webView;
@@ -15,6 +16,18 @@
 @end
 
 @implementation GTDetailViewController
+
++ (void)load{
+//    [GTMediator registerScheme:@"detail://" processBlock:^(NSDictionary * _Nonnull params) {
+//        NSString *url = [params objectForKey:@"url"];
+//        UINavigationController *navi = (UINavigationController *)[params objectForKey:@"controller"];
+//        GTDetailViewController *controller = [[GTDetailViewController alloc] initWithUrlSting:url];
+//        [navi pushViewController:controller animated:YES];
+//    }];
+    [GTMediator registerProtol:@protocol(GTDetailViewControllerProtocol) class:[self class]];
+}
+
+
 
 - (void)dealloc {
     [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
@@ -26,6 +39,10 @@
         self.articleUrl = urlString;
     }
     return self;
+}
+
+- (__kindof UIViewController *)detailViewControllerWithUrl:(NSString *)detailUrl{
+    return [[[self class] alloc] initWithUrlSting:detailUrl];
 }
 
 - (void)viewDidLoad {
