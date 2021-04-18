@@ -19,11 +19,11 @@
 		938B6B93254EE7F900EB4670 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B6B92254EE7F900EB4670 /* SceneDelegate.m */; };
 		938B6B96254EE7F900EB4670 /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B6B95254EE7F900EB4670 /* GTNewsViewController.m */; };
 		938B6B9B254EE7FA00EB4670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938B6B9A254EE7FA00EB4670 /* Assets.xcassets */; };
-		938B6B9E254EE7FA00EB4670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 938B6B9C254EE7FA00EB4670 /* LaunchScreen.storyboard */; };
 		938B6BA1254EE7FA00EB4670 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B6BA0254EE7FA00EB4670 /* main.m */; };
 		938B6BAB254EE7FA00EB4670 /* SampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B6BAA254EE7FA00EB4670 /* SampleAppTests.m */; };
 		938B6BB6254EE7FA00EB4670 /* SampleAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B6BB5254EE7FA00EB4670 /* SampleAppUITests.m */; };
 		93B3C16B2562A14A0017F3E6 /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B3C16A2562A14A0017F3E6 /* GTListItem.m */; };
+		93BBD721262C14A1008D5381 /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BBD720262C14A1008D5381 /* GTSplashView.m */; };
 		93C9B95F2561413D00A79D8F /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9B95E2561413D00A79D8F /* GTListLoader.m */; };
 		93E4E252255A6AF300B1204A /* GTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4E251255A6AF300B1204A /* GTDeleteCellView.m */; };
 /* End PBXBuildFile section */
@@ -69,7 +69,6 @@
 		938B6B94254EE7F900EB4670 /* GTNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNewsViewController.h; sourceTree = "<group>"; };
 		938B6B95254EE7F900EB4670 /* GTNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNewsViewController.m; sourceTree = "<group>"; };
 		938B6B9A254EE7FA00EB4670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		938B6B9D254EE7FA00EB4670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		938B6B9F254EE7FA00EB4670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		938B6BA0254EE7FA00EB4670 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		938B6BA6254EE7FA00EB4670 /* SampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +79,8 @@
 		938B6BB7254EE7FA00EB4670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93B3C1692562A14A0017F3E6 /* GTListItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListItem.h; sourceTree = "<group>"; };
 		93B3C16A2562A14A0017F3E6 /* GTListItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListItem.m; sourceTree = "<group>"; };
+		93BBD71F262C14A1008D5381 /* GTSplashView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSplashView.h; sourceTree = "<group>"; };
+		93BBD720262C14A1008D5381 /* GTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSplashView.m; sourceTree = "<group>"; };
 		93C9B9542561411800A79D8F /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		93C9B95D2561413D00A79D8F /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
 		93C9B95E2561413D00A79D8F /* GTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoader.m; sourceTree = "<group>"; };
@@ -170,8 +171,9 @@
 				938B6B8F254EE7F900EB4670 /* AppDelegate.m */,
 				938B6B91254EE7F900EB4670 /* SceneDelegate.h */,
 				938B6B92254EE7F900EB4670 /* SceneDelegate.m */,
+				93BBD71F262C14A1008D5381 /* GTSplashView.h */,
+				93BBD720262C14A1008D5381 /* GTSplashView.m */,
 				938B6B9A254EE7FA00EB4670 /* Assets.xcassets */,
-				938B6B9C254EE7FA00EB4670 /* LaunchScreen.storyboard */,
 				938B6B9F254EE7FA00EB4670 /* Info.plist */,
 				938B6BA0254EE7FA00EB4670 /* main.m */,
 				935DC81825541559000EABA6 /* GTRecommendViewController.h */,
@@ -363,7 +365,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				938B6B9E254EE7FA00EB4670 /* LaunchScreen.storyboard in Resources */,
 				938B6B9B254EE7FA00EB4670 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +442,7 @@
 				93C9B95F2561413D00A79D8F /* GTListLoader.m in Sources */,
 				93B3C16B2562A14A0017F3E6 /* GTListItem.m in Sources */,
 				935DC81A25541559000EABA6 /* GTRecommendViewController.m in Sources */,
+				93BBD721262C14A1008D5381 /* GTSplashView.m in Sources */,
 				938B6B90254EE7F900EB4670 /* AppDelegate.m in Sources */,
 				938B6BA1254EE7FA00EB4670 /* main.m in Sources */,
 				938B6B93254EE7F900EB4670 /* SceneDelegate.m in Sources */,
@@ -478,17 +480,6 @@
 			targetProxy = 938B6BB2254EE7FA00EB4670 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		938B6B9C254EE7FA00EB4670 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				938B6B9D254EE7FA00EB4670 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		938B6BB8254EE7FA00EB4670 /* Debug */ = {
