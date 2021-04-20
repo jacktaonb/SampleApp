@@ -10,6 +10,7 @@
 #import "GTVideoViewController.h"
 #import "GTRecommendViewController.h"
 #import "GTSplashView.h"
+#import "GTMineViewController.h"
 
 @interface SceneDelegate ()<UITabBarControllerDelegate>
 
@@ -21,28 +22,19 @@
 
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     GTNewsViewController *newsViewController = [[GTNewsViewController alloc] init];
-    newsViewController.view.backgroundColor = [UIColor whiteColor];
-    newsViewController.tabBarItem.title = @"新闻";
-    newsViewController.tabBarItem.image = [UIImage imageNamed:@"1"];
-
     GTVideoViewController *videoController = [[GTVideoViewController alloc] init];
-
     GTRecommendViewController *recommendController = [[GTRecommendViewController alloc] init];
-
-    UIViewController *mineViewController = [[UIViewController alloc] init];
-    mineViewController.view.backgroundColor = [UIColor lightGrayColor];
-    mineViewController.tabBarItem.title = @"我的";
-    mineViewController.tabBarItem.image = [UIImage imageNamed:@"1"];
+    GTMineViewController *mineViewController = [[GTMineViewController alloc] init];
 
     [tabbarController setViewControllers:@[newsViewController, videoController, recommendController, mineViewController]];
     tabbarController.delegate = self;
 
     UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:tabbarController];
     UIWindow *windowScene = (UIWindow *)scene;
-    _window = [[UIWindow alloc] initWithFrame:windowScene.coordinateSpace.bounds];
-    _window.windowScene = (UIWindowScene *)windowScene;
-    [_window setRootViewController:navigationController];
-    [_window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:windowScene.coordinateSpace.bounds];
+    self.window.windowScene = (UIWindowScene *)windowScene;
+    [ self.window setRootViewController:navigationController];
+    [ self.window makeKeyAndVisible];
     [self.window addSubview:({
         GTSplashView *view = [[GTSplashView alloc] initWithFrame:self.window.bounds];
         view;

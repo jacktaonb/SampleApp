@@ -31,7 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.tabBarItem.title = @"新闻";
+    self.tabBarItem.image = [UIImage imageNamed:@"1"];
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     _tableView.dataSource = self;
     _tableView.delegate = self;
