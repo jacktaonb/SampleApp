@@ -25,6 +25,9 @@
 		93B3C16B2562A14A0017F3E6 /* GTListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B3C16A2562A14A0017F3E6 /* GTListItem.m */; };
 		93BBD721262C14A1008D5381 /* GTSplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BBD720262C14A1008D5381 /* GTSplashView.m */; };
 		93BBD72D262C1AD6008D5381 /* GTMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BBD72C262C1AD6008D5381 /* GTMediator.m */; };
+		93C836C8262EB44C00A15FEA /* libGTStaic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C836C6262EB44C00A15FEA /* libGTStaic.a */; };
+		93C836EE262EBB5100A15FEA /* GTFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C836E9262EBAED00A15FEA /* GTFramework.framework */; };
+		93C836EF262EBB5100A15FEA /* GTFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 93C836E9262EBAED00A15FEA /* GTFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93C9B95F2561413D00A79D8F /* GTListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C9B95E2561413D00A79D8F /* GTListLoader.m */; };
 		93E4E252255A6AF300B1204A /* GTDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E4E251255A6AF300B1204A /* GTDeleteCellView.m */; };
 /* End PBXBuildFile section */
@@ -45,6 +48,20 @@
 			remoteInfo = SampleApp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		93C836F0262EBB5100A15FEA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				93C836EF262EBB5100A15FEA /* GTFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3EE31D4F6581ED27FCD6A78F /* Pods-SampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleApp.release.xcconfig"; path = "Target Support Files/Pods-SampleApp/Pods-SampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +101,10 @@
 		93BBD720262C14A1008D5381 /* GTSplashView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSplashView.m; sourceTree = "<group>"; };
 		93BBD72B262C1AD6008D5381 /* GTMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTMediator.h; sourceTree = "<group>"; };
 		93BBD72C262C1AD6008D5381 /* GTMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTMediator.m; sourceTree = "<group>"; };
+		93C836C5262EB44C00A15FEA /* GTStaicTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStaicTest.h; sourceTree = "<group>"; };
+		93C836C6262EB44C00A15FEA /* libGTStaic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGTStaic.a; sourceTree = "<group>"; };
+		93C836C7262EB44C00A15FEA /* GTStaic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTStaic.h; sourceTree = "<group>"; };
+		93C836E9262EBAED00A15FEA /* GTFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTFramework.framework; sourceTree = "<group>"; };
 		93C9B9542561411800A79D8F /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		93C9B95D2561413D00A79D8F /* GTListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTListLoader.h; sourceTree = "<group>"; };
 		93C9B95E2561413D00A79D8F /* GTListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTListLoader.m; sourceTree = "<group>"; };
@@ -99,6 +120,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2971929EB3171C184D016BA1 /* Pods_SampleApp.framework in Frameworks */,
+				93C836C8262EB44C00A15FEA /* libGTStaic.a in Frameworks */,
+				93C836EE262EBB5100A15FEA /* GTFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +191,7 @@
 		938B6B8D254EE7F900EB4670 /* SampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				93C836C4262EB38100A15FEA /* GTFranework */,
 				932BCBFF25EE6B4E00EAF79D /* VideoController */,
 				93D180AE255C046600EAF7B7 /* NewsController */,
 				938B6B8E254EE7F900EB4670 /* AppDelegate.h */,
@@ -227,6 +251,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		93C836C4262EB38100A15FEA /* GTFranework */ = {
+			isa = PBXGroup;
+			children = (
+				93C836E9262EBAED00A15FEA /* GTFramework.framework */,
+				93C836C7262EB44C00A15FEA /* GTStaic.h */,
+				93C836C5262EB44C00A15FEA /* GTStaicTest.h */,
+				93C836C6262EB44C00A15FEA /* libGTStaic.a */,
+			);
+			path = GTFranework;
+			sourceTree = "<group>";
+		};
 		93D180AE255C046600EAF7B7 /* NewsController */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +312,7 @@
 				938B6B88254EE7F800EB4670 /* Frameworks */,
 				938B6B89254EE7F800EB4670 /* Resources */,
 				2E62CD5D6C67CA01116B1407 /* [CP] Embed Pods Frameworks */,
+				93C836F0262EBB5100A15FEA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -609,10 +645,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3HD9656AL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFranework",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFranework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tao.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,10 +676,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J3HD9656AL;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFranework",
+				);
 				INFOPLIST_FILE = SampleApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SampleApp/GTFranework",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tao.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

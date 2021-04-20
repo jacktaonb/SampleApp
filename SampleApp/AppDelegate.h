@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTStaic.h"
+#import <GTFramework/GTFramework.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
