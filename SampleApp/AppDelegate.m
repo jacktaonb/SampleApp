@@ -13,6 +13,8 @@
 #import "GTMineViewController.h"
 #import "GTSplashView.h"
 #import "GTVideoViewController.h"
+
+
 @interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
@@ -38,12 +40,32 @@
             GTSplashView *view = [[GTSplashView alloc] initWithFrame:self.window.bounds];
             view;
         })];
+    
+    
+//    static
+//    [[GTStaic alloc] init];
+    
+//    [[GTFramework alloca] init];
+    
+    
+      //crash
+//    [self _caughtException];
+//    [@[].mutableCopy addObject:nil];
     return YES;
 }
 
 
-#pragma mark - UISceneSession lifecycle
+#pragma mark - crash
 
+-(void)_caughtException{
+    NSSetUncaughtExceptionHandler(HandelNSException);
+    
+}
 
+void HandelNSException(NSException *exception){
+    __unused NSString * reason = [exception reason];
+    __unused NSString * name = [exception name];
+    //crash
+}
 
 @end
