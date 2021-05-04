@@ -13,6 +13,7 @@
 #import "GTMineViewController.h"
 #import "GTSplashView.h"
 #import "GTVideoViewController.h"
+#import "GTLocation.h"
 
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
@@ -51,6 +52,7 @@
       //crash
 //    [self _caughtException];
 //    [@[].mutableCopy addObject:nil];
+    [[GTLocation locationManager] checkLocationAuthorization];
     return YES;
 }
 
