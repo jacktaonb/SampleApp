@@ -55,6 +55,8 @@
 //    [@[].mutableCopy addObject:nil];
     [[GTLocation locationManager] checkLocationAuthorization];
     [[GTNotification notificationManager] checkNotificationAuthorization];
+    
+    
     return YES;
 }
 
@@ -71,5 +73,16 @@ void HandelNSException(NSException *exception){
     __unused NSString * name = [exception name];
     //crash
 }
+
+#pragma mark - tuisong
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    //notification实现
+     
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    
+}
+
 
 @end
