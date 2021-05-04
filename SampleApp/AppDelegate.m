@@ -14,6 +14,7 @@
 #import "GTSplashView.h"
 #import "GTVideoViewController.h"
 #import "GTLocation.h"
+#import "GTNotification.h"
 
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
@@ -53,6 +54,7 @@
 //    [self _caughtException];
 //    [@[].mutableCopy addObject:nil];
     [[GTLocation locationManager] checkLocationAuthorization];
+    [[GTNotification notificationManager] checkNotificationAuthorization];
     return YES;
 }
 
