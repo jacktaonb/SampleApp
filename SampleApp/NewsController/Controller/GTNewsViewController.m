@@ -11,6 +11,8 @@
 #import "GTListLoader.h"
 #import "GTListItem.h"
 #import "GTMediator.h"
+#import "GTSearchBar.h"
+#import "GTCommentManager.h"
 
 @interface GTNewsViewController ()<UITableViewDataSource, UITableViewDelegate, GTNormalTableViewCellDelgate>
 @property (nonatomic, strong, readwrite) UITableView *tableView;
@@ -48,6 +50,20 @@
         strongSelf.dataArray = dataArray;
         [strongSelf.tableView reloadData];
     }];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    [self.tabBarController.navigationItem setTitleView:({
+//            GTSearchBar *searchBar = [[GTSearchBar alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width - 20,  self.navigationController.navigationBar.bounds.size.height)];
+//            searchBar;
+        //拉起键盘和输入框
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, UIScreen.mainScreen.bounds.size.width - 20, self.navigationController.navigationBar.bounds.size.height)];
+        button.backgroundColor = [UIColor lightGrayColor];
+        [button addTarget:self action:@selector(_showCommentView) forControlEvents:UIControlEventTouchUpInside];
+        button;
+    })];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -95,6 +111,10 @@
 //        [strongSelf.dataArray removeLastObject];
 //        [strongSelf.tableView deleteRowsAtIndexPaths:@[[strongSelf.tableView indexPathForCell:tableViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
 //    }];
+}
+
+-(void)_showCommentView{
+    [[GTCommentManager sharedManager] showCommentView];
 }
 
 @end

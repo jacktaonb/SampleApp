@@ -20,6 +20,8 @@
 		935FEFDC2559474F0034C370 /* GTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 935FEFDB2559474F0034C370 /* GTDetailViewController.m */; };
 		9376341C264163DB00B4D317 /* GTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9376341B264163DB00B4D317 /* GTLocation.m */; };
 		9376341F26416DDB00B4D317 /* GTNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9376341E26416DDB00B4D317 /* GTNotification.m */; };
+		937FBE322642181D00416C8E /* GTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 937FBE312642181D00416C8E /* GTSearchBar.m */; };
+		937FBE352642200400416C8E /* GTCommentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 937FBE342642200400416C8E /* GTCommentManager.m */; };
 		938B6B90254EE7F900EB4670 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B6B8F254EE7F900EB4670 /* AppDelegate.m */; };
 		938B6B96254EE7F900EB4670 /* GTNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938B6B95254EE7F900EB4670 /* GTNewsViewController.m */; };
 		938B6B9B254EE7FA00EB4670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 938B6B9A254EE7FA00EB4670 /* Assets.xcassets */; };
@@ -92,6 +94,10 @@
 		9376341B264163DB00B4D317 /* GTLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLocation.m; sourceTree = "<group>"; };
 		9376341D26416DDB00B4D317 /* GTNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTNotification.h; sourceTree = "<group>"; };
 		9376341E26416DDB00B4D317 /* GTNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTNotification.m; sourceTree = "<group>"; };
+		937FBE302642181D00416C8E /* GTSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSearchBar.h; sourceTree = "<group>"; };
+		937FBE312642181D00416C8E /* GTSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSearchBar.m; sourceTree = "<group>"; };
+		937FBE332642200400416C8E /* GTCommentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCommentManager.h; sourceTree = "<group>"; };
+		937FBE342642200400416C8E /* GTCommentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTCommentManager.m; sourceTree = "<group>"; };
 		938B6B8B254EE7F900EB4670 /* SampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		938B6B8E254EE7F900EB4670 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		938B6B8F254EE7F900EB4670 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -266,6 +272,10 @@
 				935DC82A255566F4000EABA6 /* GTNormalTableViewCell.m */,
 				93E4E250255A6AF200B1204A /* GTDeleteCellView.h */,
 				93E4E251255A6AF300B1204A /* GTDeleteCellView.m */,
+				937FBE302642181D00416C8E /* GTSearchBar.h */,
+				937FBE312642181D00416C8E /* GTSearchBar.m */,
+				937FBE332642200400416C8E /* GTCommentManager.h */,
+				937FBE342642200400416C8E /* GTCommentManager.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -510,6 +520,7 @@
 				9376341C264163DB00B4D317 /* GTLocation.m in Sources */,
 				938B6B96254EE7F900EB4670 /* GTNewsViewController.m in Sources */,
 				935DC81425538E7D000EABA6 /* GTVideoViewController.m in Sources */,
+				937FBE322642181D00416C8E /* GTSearchBar.m in Sources */,
 				932BCC0E25EE6D0100EAF79D /* GTViedoCoverView.m in Sources */,
 				9313FF8125F116E90075E772 /* GTVideoToolbar.m in Sources */,
 				93BBD72D262C1AD6008D5381 /* GTMediator.m in Sources */,
@@ -521,6 +532,7 @@
 				9376341F26416DDB00B4D317 /* GTNotification.m in Sources */,
 				938B6B90254EE7F900EB4670 /* AppDelegate.m in Sources */,
 				938B6BA1254EE7FA00EB4670 /* main.m in Sources */,
+				937FBE352642200400416C8E /* GTCommentManager.m in Sources */,
 				93C836F6262EC5AA00A15FEA /* GTMineViewController.m in Sources */,
 				9313FF7B25F103CD0075E772 /* GTVideoPlayer.m in Sources */,
 			);
